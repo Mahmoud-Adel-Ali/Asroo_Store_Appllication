@@ -1,4 +1,6 @@
-import 'package:asroo_store/core/env_variable.dart';
+import 'package:asroo_store/core/app/connectivity_controller.dart';
+import 'package:asroo_store/core/app/env_variable.dart';
+import 'package:asroo_store/core/common/screens/no_network_screen.dart';
 import 'package:flutter/material.dart';
 
 class AsrooStoreApp extends StatelessWidget {
@@ -6,14 +8,30 @@ class AsrooStoreApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Asroo Store',
-      debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const Home(),
+    return ValueListenableBuilder(
+      valueListenable: ConnectivityController.instance.isConnected,
+      builder: (context, value, child) {
+        if (value) {
+          return MaterialApp(
+            title: 'Asroo Store',
+            debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
+            theme: ThemeData(
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+              useMaterial3: true,
+            ),
+            builder: (context, widget) {
+              ConnectivityController.instance.init();
+              return widget!;
+            },
+            home: const Home(),
+          );
+        }
+        return MaterialApp(
+          title: 'No network',
+          debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
+          home: const NoNetworkScreen(),
+        );
+      },
     );
   }
 }
