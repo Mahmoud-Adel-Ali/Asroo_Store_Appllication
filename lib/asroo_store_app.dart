@@ -1,3 +1,4 @@
+import 'package:asroo_store/core/env_variable.dart';
 import 'package:flutter/material.dart';
 
 class AsrooStoreApp extends StatelessWidget {
@@ -7,7 +8,7 @@ class AsrooStoreApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Asroo Store',
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
