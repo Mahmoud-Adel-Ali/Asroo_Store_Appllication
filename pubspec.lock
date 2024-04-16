@@ -175,7 +175,7 @@ packages:
     source: hosted
     version: "5.1.0"
   flutter_launcher_icons:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: flutter_launcher_icons
       sha256: "526faf84284b86a4cb36d20a5e45147747b7563d921373d4ee0559c54fcdbcea"
@@ -398,7 +398,7 @@ packages:
     source: hosted
     version: "2.1.4"
   very_good_analysis:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: very_good_analysis
       sha256: "9ae7f3a3bd5764fb021b335ca28a34f040cd0ab6eec00a1b213b445dae58a4b8"
