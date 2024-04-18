@@ -8,7 +8,7 @@ class TestTwoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber,
+      // backgroundColor: Colors.amber,
       appBar: AppBar(
         title: const Text('Test Two'),
       ),
@@ -22,7 +22,7 @@ class TestTwoScreen extends StatelessWidget {
           child: Container(
             height: 50,
             width: 150,
-            color: Colors.black,
+            color:const Color.fromARGB(255, 144, 144, 144),
           ),
         ),
       ),
