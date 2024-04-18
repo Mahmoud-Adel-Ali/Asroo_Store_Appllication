@@ -1,6 +1,7 @@
 import 'package:asroo_store/core/app/connectivity_controller.dart';
 import 'package:asroo_store/core/app/env_variable.dart';
 import 'package:asroo_store/core/common/screens/no_network_screen.dart';
+import 'package:asroo_store/core/rroutes/app_routes.dart';
 import 'package:asroo_store/core/style/fonts/font_family_helper.dart';
 import 'package:asroo_store/core/style/fonts/font_weight_helper.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +29,9 @@ class AsrooStoreApp extends StatelessWidget {
                 ConnectivityController.instance.init();
                 return widget!;
               },
-              home: const Home(),
+              // home: const Home(),
+              initialRoute: AppRoutes.test1Screen,
+              onGenerateRoute: AppRoutes.onGenerateRoute,
             ),
           );
         }
