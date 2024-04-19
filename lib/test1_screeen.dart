@@ -8,22 +8,27 @@ class TestOneScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.pink,
+      // backgroundColor: Colors.pink,
       appBar: AppBar(
         title: const Text('Test One'),
       ),
-      body: Center(
-        child: InkWell(
-          onTap: () {
-            context.pushReplacementNamed(AppRoutes.test2Screen);
-            // Navigator.of(context).pushReplacementNamed(AppRoutes.test2Screen);
-          },
-          child: Container(
-            height: 50,
-            width: 150,
-            color: Colors.black,
+      body: Column(
+        children: [
+          Center(
+            child: InkWell(
+              onTap: () {
+                context.pushReplacementNamed(AppRoutes.test2Screen);
+                // Navigator.of(context).pushReplacementNamed(AppRoutes.test2Screen);
+              },
+              child: Container(
+                height: 50,
+                width: 150,
+                color: Colors.black,
+              ),
+            ),
           ),
-        ),
+         Image.asset(context.image.mainImage)
+        ],
       ),
     );
   }
