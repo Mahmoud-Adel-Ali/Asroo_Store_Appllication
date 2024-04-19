@@ -1,6 +1,8 @@
 import 'package:asroo_store/core/app/connectivity_controller.dart';
 import 'package:asroo_store/core/app/env_variable.dart';
 import 'package:asroo_store/core/common/screens/no_network_screen.dart';
+import 'package:asroo_store/core/style/fonts/font_family_helper.dart';
+import 'package:asroo_store/core/style/fonts/font_weight_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -47,8 +49,41 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Asroo Store"),
+        title: const Text('Asroo Store'),
         centerTitle: true,
+      ),
+      body: const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'محمود عادل',
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
+            Text(
+              'My Font',
+              style: TextStyle(fontSize: 20,),
+            ),
+            Text(
+              'محمود عادل',
+              style: TextStyle(
+                fontSize: 20,
+                fontFamily: FontFamilyHelper.cairoArabic,
+                fontWeight: FontWeightHelper.bold,
+              ),
+            ),
+            Text( 
+              'My Font',
+              style: TextStyle(
+                fontSize: 20,
+                fontFamily: FontFamilyHelper.poppinsEnglish,
+                fontWeight: FontWeightHelper.bold,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
