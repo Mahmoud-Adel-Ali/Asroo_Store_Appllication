@@ -27,7 +27,17 @@ class TestOneScreen extends StatelessWidget {
               ),
             ),
           ),
-         Image.asset(context.image.mainImage)
+          const SizedBox(
+            height: 50,
+          ),
+          Text(
+            context.translate('app_name'),
+            style: const TextStyle(fontSize: 50),
+          ),
+          const SizedBox(
+            height: 50,
+          ),
+          Image.asset(context.image.mainImage)
         ],
       ),
     );
