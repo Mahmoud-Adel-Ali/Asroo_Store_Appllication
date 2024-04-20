@@ -1,6 +1,7 @@
 import 'package:asroo_store/core/app/connectivity_controller.dart';
 import 'package:asroo_store/core/app/env_variable.dart';
 import 'package:asroo_store/core/common/screens/no_network_screen.dart';
+import 'package:asroo_store/core/language/app_localizations_setup.dart';
 import 'package:asroo_store/core/rroutes/app_routes.dart';
 import 'package:asroo_store/core/style/fonts/font_family_helper.dart';
 import 'package:asroo_store/core/style/fonts/font_weight_helper.dart';
@@ -22,7 +23,7 @@ class AsrooStoreApp extends StatelessWidget {
             child: MaterialApp(
               title: 'Asroo Store',
               debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
-              theme: themeDark(),// or themeLight
+              theme: themeLight(), // or themeLight
               builder: (context, widget) {
                 ConnectivityController.instance.init();
                 return widget!;
@@ -30,6 +31,13 @@ class AsrooStoreApp extends StatelessWidget {
               // home: const Home(),
               initialRoute: AppRoutes.test1Screen,
               onGenerateRoute: AppRoutes.onGenerateRoute,
+              //localizations section
+              locale: const Locale('en'),
+              supportedLocales: AppLocalizationsSetup.supportedLocales,
+              localizationsDelegates:
+                  AppLocalizationsSetup.localizationsDelegates,
+              localeResolutionCallback:
+                  AppLocalizationsSetup.localeResolutionCallback,
             ),
           );
         }
@@ -65,7 +73,9 @@ class Home extends StatelessWidget {
             ),
             Text(
               'My Font',
-              style: TextStyle(fontSize: 20,),
+              style: TextStyle(
+                fontSize: 20,
+              ),
             ),
             Text(
               'محمود عادل',
@@ -75,7 +85,7 @@ class Home extends StatelessWidget {
                 fontWeight: FontWeightHelper.bold,
               ),
             ),
-            Text( 
+            Text(
               'My Font',
               style: TextStyle(
                 fontSize: 20,
