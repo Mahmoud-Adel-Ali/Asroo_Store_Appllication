@@ -17,7 +17,6 @@ class TestTwoScreen extends StatelessWidget {
           onTap: () {
             context.pushReplacementNamed(AppRoutes.test1Screen);
 
-            // Navigator.of(context).pushReplacementNamed(AppRoutes.test1Screen);
           },
           child: Container(
             height: 50,

@@ -18,7 +18,6 @@ class TestOneScreen extends StatelessWidget {
             child: InkWell(
               onTap: () {
                 context.pushReplacementNamed(AppRoutes.test2Screen);
-                // Navigator.of(context).pushReplacementNamed(AppRoutes.test2Screen);
               },
               child: Container(
                 height: 50,
@@ -37,7 +36,7 @@ class TestOneScreen extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
-          Image.asset(context.image.mainImage)
+          // Image.asset(context.image.mainImage),
         ],
       ),
     );

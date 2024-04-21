@@ -10,7 +10,7 @@ class PageUnderBuildScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Container(
         constraints: const BoxConstraints.expand(),
-        decoration: BoxDecoration(
+        decoration:const BoxDecoration(
           image: DecorationImage(
             image: AssetImage(AppImages.pageUnderBuild),
             fit: BoxFit.fill,

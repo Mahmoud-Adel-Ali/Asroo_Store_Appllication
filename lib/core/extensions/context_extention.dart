@@ -1,6 +1,6 @@
 import 'package:asroo_store/core/language/app_localizations.dart';
+import 'package:asroo_store/core/style/theme/assets_extension.dart';
 import 'package:asroo_store/core/style/theme/color_extention.dart';
-import 'package:asroo_store/core/style/theme/image_extention.dart';
 import 'package:flutter/material.dart';
 
 extension ContextExt on BuildContext {
@@ -12,7 +12,7 @@ extension ContextExt on BuildContext {
   MyColors get color => Theme.of(this).extension<MyColors>()!;
 
   // colors
-  MyImages get image => Theme.of(this).extension<MyImages>()!;
+  MyAssets get image => Theme.of(this).extension<MyAssets>()!;
   // navigator
   Future<dynamic> pushName(String routename, {Object? object}) {
     return Navigator.of(this).pushNamed(routename, arguments: object);
@@ -24,7 +24,7 @@ extension ContextExt on BuildContext {
   }
 
   // Future<dynamic> pushAndRemoveUntil(String routename, {Object? object}) {
-  //   return Navigator.of(this).pushAndRemoveUntil(routename, (route) => false);
+  //   return Navigator.of(this).pushAndRemoveUntil(routename, (route) => false)
   // }
 
   void pop() => Navigator.of(this).pop();

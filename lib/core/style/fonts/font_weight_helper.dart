@@ -8,4 +8,3 @@ abstract class FontWeightHelper {
   static const FontWeight medium = FontWeight.w700;
   static const FontWeight regular = FontWeight.w700;
 }
-
