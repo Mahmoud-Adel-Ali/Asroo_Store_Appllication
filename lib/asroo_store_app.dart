@@ -23,13 +23,13 @@ class AsrooStoreApp extends StatelessWidget {
             child: MaterialApp(
               title: 'Asroo Store',
               debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
-              theme: themeLight(), // or themeLight
+              theme: themeDark(), // or themeLight
               builder: (context, widget) {
                 ConnectivityController.instance.init();
                 return widget!;
               },
               // home: const Home(),
-              initialRoute: AppRoutes.test1Screen,
+              initialRoute: AppRoutes.login,
               onGenerateRoute: AppRoutes.onGenerateRoute,
               //localizations section
               locale: const Locale('en'),
