@@ -21,9 +21,11 @@ dependencies:
   flutter_native_splash: ^2.3.10
   flutter_screenutil: ^5.9.0
   freezed_annotation: ^2.4.1
+  get_it: ^7.7.0
   shared_preferences: ^2.2.3
 
 dev_dependencies:
+  # dart run build_runner build --delete-conflicting-outputs
   build_runner: ^2.4.9
   flutter_launcher_icons: ^0.13.1
   flutter_lints: ^2.0.0

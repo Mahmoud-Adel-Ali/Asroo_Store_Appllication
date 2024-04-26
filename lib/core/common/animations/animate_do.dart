@@ -1,4 +1,6 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:asroo_store/core/services/shared_preferences/pref_key.dart';
+import 'package:asroo_store/core/services/shared_preferences/shared_pref.dart';
 import 'package:flutter/material.dart';
 
 class CustomFadeInDown extends StatelessWidget {
@@ -56,23 +58,17 @@ class CustomFadeInLeft extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //TODO: sharePreferences
-    return FadeInLeft(
-      delay: const Duration(milliseconds: 300),
-      duration: Duration(milliseconds: duration),
-      child: child,
-    );
-    // return SharedPref().getString(PrefKeys.language) == 'ar'
-    //     ? FadeInLeft(
-    //         delay: const Duration(milliseconds: 300),
-    //         duration: Duration(milliseconds: duration),
-    //         child: child,
-    //       )
-    //     : FadeInRight(
-    //         delay: const Duration(milliseconds: 300),
-    //         duration: Duration(milliseconds: duration),
-    //         child: child,
-    //       );
+    return SharedPref().getString(PrefKeys.language) == 'ar'
+        ? FadeInLeft(
+            delay: const Duration(milliseconds: 300),
+            duration: Duration(milliseconds: duration),
+            child: child,
+          )
+        : FadeInRight(
+            delay: const Duration(milliseconds: 300),
+            duration: Duration(milliseconds: duration),
+            child: child,
+          );
   }
 }
 
@@ -88,22 +84,16 @@ class CustomFadeInRight extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //TODO: sharePreferences
-    return FadeInRight(
-      delay: const Duration(milliseconds: 300),
-      duration: Duration(milliseconds: duration),
-      child: child,
-    );
-    // return SharedPref().getString(PrefKeys.language) == 'ar'
-    //     ? FadeInRight(
-    //         delay: const Duration(milliseconds: 300),
-    //         duration: Duration(milliseconds: duration),
-    //         child: child,
-    //       )
-    //     : FadeInLeft(
-    //         delay: const Duration(milliseconds: 300),
-    //         duration: Duration(milliseconds: duration),
-    //         child: child,
-    //       );
+    return SharedPref().getString(PrefKeys.language) == 'ar'
+        ? FadeInRight(
+            delay: const Duration(milliseconds: 300),
+            duration: Duration(milliseconds: duration),
+            child: child,
+          )
+        : FadeInLeft(
+            delay: const Duration(milliseconds: 300),
+            duration: Duration(milliseconds: duration),
+            child: child,
+          );
   }
 }
