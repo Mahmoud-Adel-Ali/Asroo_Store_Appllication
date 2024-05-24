@@ -8,8 +8,8 @@ abstract class FontFamilyHelper {
   static const String poppinsEnglish = 'Poppins';
 
   static String getLocalizedFamily() {
-    final CurrentLang = SharedPref().getString(PrefKeys.language);
-    if (CurrentLang == 'ar') {
+    final currentLang = SharedPref().getString(PrefKeys.language);
+    if (currentLang == 'ar') {
       return cairoArabic;
     } else {
       return poppinsEnglish;
