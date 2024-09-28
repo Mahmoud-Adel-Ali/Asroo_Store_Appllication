@@ -40,9 +40,7 @@ class AsrooStoreApp extends StatelessWidget {
                   return MaterialApp(
                     title: 'Asroo Store',
                     debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
-                    theme: cubit.isDark
-                        ? themeDark()
-                        : themeLight(),
+                    theme: cubit.isDark ? themeDark() : themeLight(),
                     builder: (context, widget) {
                       ConnectivityController.instance.init();
                       return widget!;
@@ -51,7 +49,7 @@ class AsrooStoreApp extends StatelessWidget {
                     initialRoute: AppRoutes.login,
                     onGenerateRoute: AppRoutes.onGenerateRoute,
                     //localizations section
-                    locale:  Locale(cubit.currentLanguageCode),
+                    locale: Locale(cubit.currentLanguageCode),
                     supportedLocales: AppLocalizationsSetup.supportedLocales,
                     localizationsDelegates:
                         AppLocalizationsSetup.localizationsDelegates,
