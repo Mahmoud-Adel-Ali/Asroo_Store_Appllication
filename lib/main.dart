@@ -13,7 +13,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // Platform.isAndroid
 
-  await EnvVariable.instance.init(envTypeEnum: EnvTypeEnum.prod);
+  await EnvVariable.instance.init(envTypeEnum: EnvTypeEnum.dev);
   Bloc.observer = AppBlocObserver();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
