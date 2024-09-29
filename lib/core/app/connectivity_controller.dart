@@ -13,15 +13,16 @@ class ConnectivityController {
   ValueNotifier<bool> isConnected = ValueNotifier(true);
   Future<void> init() async {
     // final result = await Connectivity();
-    final ConnectivityResult result = await Connectivity().checkConnectivity();
+    final List<ConnectivityResult> result =
+        await Connectivity().checkConnectivity();
     isInternetConnected(result);
     // listen to changing in internet
     Connectivity().onConnectivityChanged.listen(isInternetConnected);
   }
 
-  bool isInternetConnected(ConnectivityResult result) {
-    if (result == ConnectivityResult.mobile ||
-        result == ConnectivityResult.wifi) {
+  bool isInternetConnected(List<ConnectivityResult> result) {
+    if (result[0] == ConnectivityResult.mobile ||
+        result[0] == ConnectivityResult.wifi) {
       isConnected.value = true;
       return true;
     } else {
