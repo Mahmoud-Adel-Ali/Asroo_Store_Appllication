@@ -1,4 +1,3 @@
-
 import 'package:asroo_store/core/language/app_localizations.dart';
 import 'package:asroo_store/core/style/theme/assets_extension.dart';
 import 'package:asroo_store/core/style/theme/color_extention.dart';
@@ -26,9 +25,10 @@ extension ContextExt on BuildContext {
         .pushReplacementNamed(routename, arguments: object);
   }
 
-  // Future<dynamic> pushAndRemoveUntil(String routename, {Object? object}) {
-  //   return Navigator.of(this).pushAndRemoveUntil(routename, (route) => false)
-  // }
+  Future<dynamic> pushNamedAndRemoveUntil(String routename, {Object? object}) {
+    return Navigator.of(this)
+        .pushNamedAndRemoveUntil(routename, (route) => false);
+  }
 
   void pop() => Navigator.of(this).pop();
 }
