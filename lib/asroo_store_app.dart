@@ -7,8 +7,6 @@ import 'package:asroo_store/core/language/app_localizations_setup.dart';
 import 'package:asroo_store/core/rroutes/app_routes.dart';
 import 'package:asroo_store/core/services/shared_preferences/pref_key.dart';
 import 'package:asroo_store/core/services/shared_preferences/shared_pref.dart';
-import 'package:asroo_store/core/style/fonts/font_family_helper.dart';
-import 'package:asroo_store/core/style/fonts/font_weight_helper.dart';
 import 'package:asroo_store/core/style/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -67,55 +65,6 @@ class AsrooStoreApp extends StatelessWidget {
           home: const NoNetworkScreen(),
         );
       },
-    );
-  }
-}
-
-class Home extends StatelessWidget {
-  const Home({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Asroo Store'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'محمود عادل',
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-            Text(
-              'My Font',
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
-            Text(
-              'محمود عادل',
-              style: TextStyle(
-                fontSize: 20,
-                fontFamily: FontFamilyHelper.cairoArabic,
-                fontWeight: FontWeightHelper.bold,
-              ),
-            ),
-            Text(
-              'My Font',
-              style: TextStyle(
-                fontSize: 20,
-                fontFamily: FontFamilyHelper.poppinsEnglish,
-                fontWeight: FontWeightHelper.bold,
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }

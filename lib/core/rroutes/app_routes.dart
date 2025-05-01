@@ -15,7 +15,7 @@ class AppRoutes {
         return MaterialPageRoute(builder: (context) => const SignUpScreen());
       default:
         return MaterialPageRoute(
-          builder: (context) => const PageUnderBuildScreen(),
+          builder: (context) => const UnderBuildScreen(),
         );
     }
   }
