@@ -22,7 +22,7 @@ class AsrooStoreApp extends StatelessWidget {
       builder: (context, value, child) {
         if (value) {
           return BlocProvider<AppCubit>(
-            create: (context) => sl<AppCubit>()
+            create: (context) => getit<AppCubit>()
               ..changeAppThemeMode(
                 sharedMode: SharedPref().getBoolean(PrefKeys.mode),
               )
