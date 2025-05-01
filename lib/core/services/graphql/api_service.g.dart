@@ -6,9 +6,6 @@ part of 'api_service.dart';
 // RetrofitGenerator
 // **************************************************************************
 
-// ignore: lines_longer_than_80_chars
-// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element
-
 class _ApiService implements ApiService {
   _ApiService(
     this._dio, {
@@ -18,7 +15,6 @@ class _ApiService implements ApiService {
     baseUrl ??= 'https://api.escuelajs.co';
   }
 
-  // ignore: unused_field
   final Dio _dio;
 
   String? baseUrl;

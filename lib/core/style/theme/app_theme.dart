@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 
 ThemeData themeDark() {
   return ThemeData(
-    scaffoldBackgroundColor:ColorsDark.mainColor,
+    scaffoldBackgroundColor: ColorsDark.mainColor,
     extensions: const <ThemeExtension<dynamic>>[
       MyColors.dark,
       MyAssets.dark,

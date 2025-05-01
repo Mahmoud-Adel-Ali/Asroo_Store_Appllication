@@ -17,7 +17,6 @@ class SignUpScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // ignore: prefer_const_constructors
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: SingleChildScrollView(
@@ -36,7 +35,8 @@ class SignUpScreenBody extends StatelessWidget {
             const SignUpForm(),
             SizedBox(height: 20.h),
             CustomFadeInUp(
-              duration: durationOfAnimation + 400,
+              duration: durationOfAnimation + 
+              400,
               child: TextButton(
                 onPressed: () {
                   context.pushReplacementNamed(AppRoutes.login);

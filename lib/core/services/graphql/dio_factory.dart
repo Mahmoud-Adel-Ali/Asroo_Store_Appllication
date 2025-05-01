@@ -1,5 +1,3 @@
-// ignore_for_file: lines_longer_than_80_chars
-
 import 'package:asroo_store/core/services/shared_preferences/pref_key.dart';
 import 'package:asroo_store/core/services/shared_preferences/shared_pref.dart';
 import 'package:dio/dio.dart';

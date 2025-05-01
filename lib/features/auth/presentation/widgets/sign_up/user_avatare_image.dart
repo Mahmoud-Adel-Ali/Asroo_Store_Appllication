@@ -9,11 +9,11 @@ class UserAvatareImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomFadeInDown(
-              duration: durationOfAnimation + 100,
-              child: CircleAvatar(
-                radius: 45,
-                backgroundImage: AssetImage(AppImages.userAvatar),
-              ),
-            );
+      duration: durationOfAnimation + 100,
+      child: CircleAvatar(
+        radius: 45,
+        backgroundImage: AssetImage(AppImages.userAvatar),
+      ),
+    );
   }
 }

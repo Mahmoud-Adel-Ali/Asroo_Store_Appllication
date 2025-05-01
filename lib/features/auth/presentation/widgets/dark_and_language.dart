@@ -19,7 +19,7 @@ class DarkAndLanguage extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        BlocBuilder(
+        BlocBuilder<AppCubit, AppState>(
           bloc: cubit,
           builder: (context, state) {
             return CustomFadeInRight(

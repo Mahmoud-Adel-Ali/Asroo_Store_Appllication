@@ -9,21 +9,21 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Scaffold(
         bottomNavigationBar: CustomPaint(
-            size: Size(MediaQuery.of(context).size.width, 150.h),
-            painter: AuthCustomPainter(
-              gradient: LinearGradient(
-                colors: [
-                  context.color.bluePinkLight!,
-                  context.color.bluePinkLight!,
-                  context.color.bluePinkLight!,
-                  context.color.bluePinkDark!,
-                ],
-              ),
+          size: Size(MediaQuery.of(context).size.width, 150.h),
+          painter: AuthCustomPainter(
+            gradient: LinearGradient(
+              colors: [
+                context.color.bluePinkLight!,
+                context.color.bluePinkLight!,
+                context.color.bluePinkLight!,
+                context.color.bluePinkDark!,
+              ],
             ),
           ),
+        ),
         body: const SignUpScreenBody(),
       ),
     );
