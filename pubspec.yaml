@@ -11,11 +11,11 @@ dependencies:
   animate_do: ^4.2.0
   connectivity_plus: ^6.1.4
   cupertino_icons: ^1.0.2
-  dio: ^5.7.0
-  firebase_core: ^3.13.0
+  dio: ^5.8.0+1
+  firebase_core: ^3.13.1
   flutter:
     sdk: flutter
-  flutter_bloc: ^9.1.0
+  flutter_bloc: ^9.1.1
   flutter_dotenv: ^5.2.1
   flutter_localizations:
     sdk: flutter
@@ -36,7 +36,7 @@ dev_dependencies:
     sdk: flutter
   freezed: ^3.0.6
   json_serializable: ^6.9.5
-  retrofit_generator: ^9.1.9
+  retrofit_generator: ^9.2.0
   very_good_analysis: ^7.0.0
 
 flutter_icons:
