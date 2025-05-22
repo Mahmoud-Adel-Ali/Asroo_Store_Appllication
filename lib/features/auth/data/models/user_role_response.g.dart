@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'user_role_body.dart';
+part of 'user_role_response.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
 UserRoleBody _$UserRoleBodyFromJson(Map<String, dynamic> json) => UserRoleBody(
-      json['role'] as String,
+      json['role'] as String?,
     );
 
 Map<String, dynamic> _$UserRoleBodyToJson(UserRoleBody instance) =>

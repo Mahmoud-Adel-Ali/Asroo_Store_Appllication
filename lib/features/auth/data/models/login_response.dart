@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+
 part 'login_response.g.dart';
 
 @JsonSerializable()
@@ -32,5 +33,5 @@ class LoginModel {
   @JsonKey(name: 'access_token')
   final String? accessToken;
   @JsonKey(name: 'refresh_token')
-  final String ?refreshToken;
+  final String? refreshToken;
 }
